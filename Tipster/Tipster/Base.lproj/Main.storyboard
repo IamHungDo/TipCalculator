@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="Xcv-qk-9dF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,7 +100,21 @@
                             <outletCollection property="gestureRecognizers" destination="1sw-HT-UuC" appends="YES" id="qGv-hm-0gP"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="ceu-bJ-Ine"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="ceu-bJ-Ine">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Settings" id="0hq-7q-WUP">
+                                <connections>
+                                    <segue destination="BDi-OA-zOa" kind="push" id="op2-tT-iV7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="tEz-Ir-x6J">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KzM-AW-oT3">
+                                    <rect key="frame" x="204" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="3QY-zq-knF" id="QIG-ta-NEj"/>
                         <outlet property="tipController" destination="MG0-Q7-yPR" id="HCL-mO-NPx"/>
@@ -114,25 +129,41 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="653.5" y="309.5"/>
+            <point key="canvasLocation" x="1240.5" y="309.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GAj-pp-cQM">
+            <objects>
+                <viewController id="BDi-OA-zOa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Bx-2p-4cV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hMv-r4-jqb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vpi-eJ-8HI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676" y="314"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="jBA-7E-Hpp">
+        <scene sceneID="swM-gq-zt8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xcv-qk-9dF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jGR-Wx-6Tn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jfC-Lt-tcG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationItem key="navigationItem" id="T6s-Jt-J6v"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JdN-gz-uPP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hH2-SS-j8m"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="z3T-aS-Fva"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wvj-1a-fEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBD-tV-HOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="310"/>
+            <point key="canvasLocation" x="653.5" y="309.5"/>
         </scene>
     </scenes>
     <resources>
